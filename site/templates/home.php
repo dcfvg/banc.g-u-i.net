@@ -2,8 +2,8 @@
 
 	<div class="row">
 
-		<div class="col-sm-7 gallerie">
-			<h6>dispositif</h6>
+		<div class="col-sm-3 gallerie">
+			<h6>about</h6>
 	    <?php echo kirbytext($page->text()) ?>
 			<?php if($page->hasImages()): ?>
 			  <?php foreach($page->images() as $image): ?>
@@ -12,10 +12,10 @@
 			  <?php endforeach ?>
 			<?php endif ?>
 		</div>
-		<div class="col-sm-3 gallerie">
-			<h6>activations</h6>
+		<div class="col-sm-2 gallerie">
+			<h6>dispositifs</h6>
 			
-			<?php $items = $page->children()->visible()  ?>
+			<?php $items = $pages->visible()  ?>
 			<?php foreach($items AS $item): ?>
 				<div class="">
 
