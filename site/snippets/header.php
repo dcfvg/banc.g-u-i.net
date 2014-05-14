@@ -11,6 +11,7 @@
 	  <meta name="robots" content="index, follow" />
 
 	  <?php echo css('assets/styles/styles.css') ?>
+  <?php echo css('assets/comic-neue-1.1/font.css') ?>
   
     <!-- Bootstrap -->
 	  <?php echo css('/assets/bootstrap/css/bootstrap.min.css') ?>

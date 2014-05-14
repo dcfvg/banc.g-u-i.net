@@ -12,20 +12,24 @@
 			  <?php endforeach ?>
 			<?php endif ?>
 		</div>
-		<div class="col-sm-2 gallerie">
+		<div class="col-sm-8 gallerie">
 			<h6>dispositifs</h6>
 			
+			
 			<?php $items = $pages->visible()  ?>
+			<?php $i = 0?>
 			<?php foreach($items AS $item): ?>
-				<div class="">
 
-		    <a<?php echo ($item->isOpen()) ? ' class="active"' : '' ?> href="<?php echo $item->url() ?>">		
-					<?php if($item->hasImages()): ?>
-					   	<?php echo thumb($item->images()->first(), array('width' => 900)); ?>
-					<?php endif ?>
-					<?php echo html($item->title()) ?>
-				</a>
-				<hr>
+				<div class="col-sm-4">
+			    <a<?php echo ($item->isOpen()) ? ' class="active"' : '' ?> href="<?php echo $item->url() ?>">		
+						<?php if($item->hasImages()): ?>
+						   	<?php echo thumb($item->images()->first(), array('width' => 900)); ?>
+						<?php endif ?>
+						<?php echo html($item->title()) ?>
+					</a>
+					<hr>
+				</div>
+
 	    <?php endforeach ?>
 		</div>
 	</div>
