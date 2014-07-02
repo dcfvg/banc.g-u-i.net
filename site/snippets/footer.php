@@ -3,10 +3,19 @@
 		</div>		  
 	</div> <!-- end container-->
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
+	<?php echo js('assets/js/jquery-1.11.1.min.js') ?>
+	<?php echo js('assets/js/isotope.pkgd.min.js') ?>
+	<?php echo js('assets/bootstrap/bootstrap.min.js') ?>
+	<script type="text/javascript" charset="utf-8" >
+		var $container = $('#gridContainer');
+		// init
+		$container.isotope({
+		  // options
+		  itemSelector: '.item',
+		  layoutMode: 'fitRows'
+		});
+	
+	</script>
 </body>
 
 </html>
