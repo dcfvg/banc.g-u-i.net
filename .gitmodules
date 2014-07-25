@@ -1,6 +1,6 @@
 [submodule "panel"]
 	path = panel
 	url = https://github.com/bastianallgeier/kirbycms-panel.git
-[submodule "ext"]
-	path = ext
-	url = https://github.com/bastianallgeier/kirbycms-extensions.git
+[submodule "assets/libraries/bootstrap"]
+	path = assets/libraries/bootstrap
+	url = https://github.com/twbs/bootstrap.git
