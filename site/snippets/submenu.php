@@ -5,12 +5,19 @@ $open  = $pages->findOpen();
 $items = ($open) ? $open->children()->visible() : false; 
 
 ?>
+
+
 <?php if($items && $items->count()): ?>
-<nav class="submenu">
-  <ul>
     <?php foreach($items AS $item): ?>
-    <li><a<?php echo ($item->isOpen()) ? ' class="active"' : '' ?> href="<?php echo $item->url() ?>"><?php echo html($item->title()) ?></a></li>
-    <?php endforeach ?>            
-  </ul>
-</nav>
+			<div class="">
+	
+	    <a<?php echo ($item->isOpen()) ? ' class="active"' : '' ?> href="<?php echo $item->url() ?>">		
+				<?php if($item->hasImages()): ?>
+				   	<?php echo thumb($item->images()->first(), array('width' => 900)); ?>
+				<?php endif ?>
+				<?php echo html($item->title()) ?>
+			</a>
+			<hr>
+    <?php endforeach ?>
+</div>
 <?php endif ?>

@@ -2,16 +2,16 @@
 
 <section id="content">
 
-	<? $projects = $page->children()->visible() ?>
-  <? foreach ($projects as $project): ?>
+  <? $collections = $pages->visible() ?>
+  <? foreach ($collections as $collection): ?>
   <article class="row">
     <div class="col-sm-8">
-      <a href="<?= $project->url() ?>">
-        <h2><?= $project->title() ?></h2>
+      <a href="<?= $collection->url() ?>">
+        <h2><?= $collection->title() ?></h2>
       </a>
     </div>
     <div class="col-sm-4">
-      <?= excerpt($project->text(), 300); ?>
+      <?= excerpt($collection->text(), 300); ?>
     </div>
   </article>
   <? endforeach ?>
