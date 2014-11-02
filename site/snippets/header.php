@@ -43,7 +43,7 @@
 			<? foreach ($projects as $project): ?>
 						<a href="<?= $project->url() ?>"
 							<?php if ($project->hasImages()): ?>
-								data-img="<?= thumb($project->images()->first(), array('width' => 500, 'height' => 500, 'crop' => false ), false); ?>"
+								data-img="<?= thumb($project->images()->first(), array('width' => 800 ), false); ?>"
 							<?php endif ?>
 							data-toggle="tooltip" title="" data-original-title="<?= $project->subtitle() ?>">
 							<?= $project->title() ?>

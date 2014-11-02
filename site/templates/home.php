@@ -1,16 +1,14 @@
-  <?php snippet('header') ?>
+	<?php snippet('header') ?>
 
-  <div id="collections">
-      <? $collections = $pages->visible() ?>
-  <? foreach ($collections as $collection): ?>
-    <div class="col-sm-8">
-      <a class="col-sm-4 btn btn-lg" href="<?= $collection->url() ?>" data-toggle="tooltip" data-placement="right" title="<?= $collection->subtitle() ?>" ><?= $collection->title() ?></a>
-    </div>
-  <? endforeach ?>
+	<div id="collections" class="row">
+			<? $collections = $pages->visible() ?>
+			<? foreach ($collections as $collection): ?>
+					<a class="col-sm-2 btn btn-lg" href="<?= $collection->url() ?>" data-toggle="tooltip" data-placement="bottom" title="<?= $collection->subtitle() ?>" ><?= $collection->title() ?></a><br/>
+			<? endforeach ?>
 
-  </div>
+	</div>
 
-  <div class="row">
-    <?= kirbytext($page->text()) ?>
-  </div>
+	<div class="col-sm-offset-2 col-sm-10" id="content">
+		<?= kirbytext($page->text()) ?>
+	</div>
 <?php snippet('footer') ?>

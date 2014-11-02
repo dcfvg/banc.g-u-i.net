@@ -7,14 +7,17 @@
 /* =Layout
 -----------------------------------------------------------------------------*/
 
-#header {
+#header, #collections {
+  margin-top: 0.5*@grid-gutter-width;
   padding: 0.5*@grid-gutter-width; 
+  margin-bottom: 0.5*@grid-gutter-width;
   
-      background-size: cover;
-    background-repeat:no-repeat;
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  border-radius: 6px;
 }
-
-
 
 .jumbotron {
   border:solid 1px #000;
@@ -46,13 +49,8 @@ a {
       border-color:black;
   }
 }
-
 img {
   .img-responsive;
-}
-#content {
-  background-color: #fff;
-
 }
 /* =Development
 -----------------------------------------------------------------------------*/

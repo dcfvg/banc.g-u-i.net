@@ -6288,10 +6288,16 @@ button.close {
 -----------------------------------------------------------------------------*/
 /* =Layout
 -----------------------------------------------------------------------------*/
-#header {
+#header,
+#collections {
+  margin-top: 15px;
   padding: 15px;
+  margin-bottom: 15px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  border-radius: 6px;
 }
 .jumbotron {
   border: solid 1px #000;
@@ -6422,9 +6428,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-#content {
-  background-color: #fff;
 }
 /* =Development
 -----------------------------------------------------------------------------*/
