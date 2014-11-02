@@ -22,15 +22,16 @@
 
 	<header id="header" class="row">
 
+		<div>
 		<!-- main bread crumb -->
 		<?php foreach($site->breadcrumb() AS $crumb): ?>
 			<?php if (! $crumb->isActive()): ?>
-					<a  type="button"  class="btn btn-lg <?= ($crumb->isActive()) ? 'btn-success"' : 'btn-default' ?>"  data-toggle="tooltip" data-placement="bottom" title="<?= $crumb->subtitle() ?>" href="<?= $crumb->url() ?>">
+					<a  class="btn btn-lg <?= ($crumb->isActive()) ? 'btn-success"' : 'btn-default' ?>"  data-toggle="tooltip" data-placement="bottom" title="<?= $crumb->subtitle() ?>" href="<?= $crumb->url() ?>">
 					<?= $crumb->title() ?>
 				</a>
 			<?php endif ?>
 		<?php endforeach ?>
-
+</div>
 		<!-- current page title and subtitle -->
 		<div class="jumbotron col-sm-4">
 			<h2><?= $page->title() ?></h2>
