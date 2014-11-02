@@ -1,21 +1,16 @@
-<?php snippet('header') ?>
+  <?php snippet('header') ?>
 
-<section id="content">
-
-  <? $collections = $pages->visible() ?>
+  <div id="collections">
+      <? $collections = $pages->visible() ?>
   <? foreach ($collections as $collection): ?>
-  <article class="row">
     <div class="col-sm-8">
-      <a href="<?= $collection->url() ?>">
-        <h2><?= $collection->title() ?></h2>
-      </a>
+      <a class="col-sm-4 btn btn-lg" href="<?= $collection->url() ?>" data-toggle="tooltip" data-placement="right" title="<?= $collection->subtitle() ?>" ><?= $collection->title() ?></a>
     </div>
-    <div class="col-sm-4">
-      <?= excerpt($collection->text(), 300); ?>
-    </div>
-  </article>
   <? endforeach ?>
 
-</section>
+  </div>
 
+  <div class="row">
+    <?= kirbytext($page->text()) ?>
+  </div>
 <?php snippet('footer') ?>

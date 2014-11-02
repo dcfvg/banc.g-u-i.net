@@ -3,26 +3,57 @@
 /* =Typography
 -----------------------------------------------------------------------------*/
 
-#header {
-  h1, h2, h3, h4, h5, h6 { .h1(); }
-  h2, h3, h4, h5, h6 { &:before{
-    content:"/";
-  } }
-}
-
 
 /* =Layout
 -----------------------------------------------------------------------------*/
 
 #header {
-  padding-top: 0.5*@grid-gutter-width; padding-bottom: 0.5*@grid-gutter-width;
-  margin-bottom: @grid-gutter-width;
-  background-color: @gray-lighter;
-  h1, h2, h3, h4, h5, h6 {
-    display: inline; margin: 0;
+  padding: 0.5*@grid-gutter-width; 
+  
+      background-size: cover;
+    background-repeat:no-repeat;
+}
+
+
+
+.jumbotron {
+  border:solid 1px #000;
+  background: white;
+  hr {
+    border-top: 1px solid #000;
+    border-top-color: #000;
   }
 }
 
+.btn {
+  border-color:black;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  margin-bottom: 0.2*@grid-gutter-width;
+
+  text-transform: lowercase;
+}
+
+a {
+  .btn;
+  .btn-default;
+    border-color:black;
+    &:hover {
+    background-color: #000;
+    color: #fff;
+      border-color:black;
+  }
+}
+
+img {
+  .img-responsive;
+}
+#content {
+  background-color: #fff;
+
+}
 /* =Development
 -----------------------------------------------------------------------------*/
 
