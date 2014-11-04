@@ -10,6 +10,17 @@
 ///
 /// HEADER & MENU 
 ///  
+
+p a {
+    color: #000;
+
+  &:hover{
+    color: #000;
+  }
+  .btn;
+  .btn-xs;
+  margin-bottom: 1px;
+}
 #header {
   margin-top: 0.5*@grid-gutter-width;
   padding: 0.5*@grid-gutter-width; 
@@ -34,6 +45,7 @@
       border-top-color: #000;
     }
   }
+
 }
 
 ///
@@ -59,15 +71,14 @@
     border-color:black;
 
   }
-  margin-bottom: 0.2*@grid-gutter-width;
-  text-transform: lowercase;
+
 }
 .tooltip {
   font-size: 1em;
 }
 #header a, #collections a {
 
-  .btn;
+  .btn();
   .btn-lg();
   
   border-color:black;
@@ -79,6 +90,8 @@
     border-color:black;
     color: #fff;
   }
+      margin-bottom: 0.2*@grid-gutter-width;
+    text-transform: lowercase; 
 }
 #collections a {
   .btn-lg();
