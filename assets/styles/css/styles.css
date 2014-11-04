@@ -6288,24 +6288,64 @@ button.close {
 -----------------------------------------------------------------------------*/
 /* =Layout
 -----------------------------------------------------------------------------*/
-#header,
-#collections {
+#header {
   margin-top: 15px;
   padding: 15px;
   margin-bottom: 15px;
+  min-height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   transition: background-image 1s ease-in-out;
   border-radius: 6px;
 }
-.jumbotron {
+#header .jumbotron {
   border: solid 1px #000;
   background: white;
 }
-.jumbotron hr {
+#header .jumbotron hr {
   border-top: 1px solid #000;
   border-top-color: #000;
+}
+#content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+#content .video-container {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+#content .video-container .embed-responsive-item,
+#content .video-container iframe,
+#content .video-container embed,
+#content .video-container object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+#content .video-container.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+#content .video-container.embed-responsive-4by3 {
+  padding-bottom: 75%;
+}
+#content .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
 }
 .btn {
   border-color: black;
@@ -6315,6 +6355,10 @@ button.close {
 .btn:hover {
   background-color: #000;
   color: #fff;
+  border-color: black;
+}
+.tooltip {
+  font-size: 1em;
 }
 #header a,
 #collections a {
@@ -6338,10 +6382,13 @@ button.close {
   user-select: none;
   margin-bottom: 6px;
   text-transform: lowercase;
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
   border-color: black;
+  color: black;
+  background-color: white;
 }
 #header a:focus,
 #collections a:focus,
@@ -6394,120 +6441,19 @@ fieldset[disabled] #collections a {
 #collections a:hover {
   background-color: #000;
   color: #fff;
-}
-#header a:hover,
-#collections a:hover,
-#header a:focus,
-#collections a:focus,
-#header a.focus,
-#collections a.focus,
-#header a:active,
-#collections a:active,
-#header a.active,
-#collections a.active,
-.open > .dropdown-toggle#header a,
-.open > .dropdown-toggle#collections a {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
-}
-#header a:active,
-#collections a:active,
-#header a.active,
-#collections a.active,
-.open > .dropdown-toggle#header a,
-.open > .dropdown-toggle#collections a {
-  background-image: none;
-}
-#header a.disabled,
-#collections a.disabled,
-#header a[disabled],
-#collections a[disabled],
-fieldset[disabled] #header a,
-fieldset[disabled] #collections a,
-#header a.disabled:hover,
-#collections a.disabled:hover,
-#header a[disabled]:hover,
-#collections a[disabled]:hover,
-fieldset[disabled] #header a:hover,
-fieldset[disabled] #collections a:hover,
-#header a.disabled:focus,
-#collections a.disabled:focus,
-#header a[disabled]:focus,
-#collections a[disabled]:focus,
-fieldset[disabled] #header a:focus,
-fieldset[disabled] #collections a:focus,
-#header a.disabled.focus,
-#collections a.disabled.focus,
-#header a[disabled].focus,
-#collections a[disabled].focus,
-fieldset[disabled] #header a.focus,
-fieldset[disabled] #collections a.focus,
-#header a.disabled:active,
-#collections a.disabled:active,
-#header a[disabled]:active,
-#collections a[disabled]:active,
-fieldset[disabled] #header a:active,
-fieldset[disabled] #collections a:active,
-#header a.disabled.active,
-#collections a.disabled.active,
-#header a[disabled].active,
-#collections a[disabled].active,
-fieldset[disabled] #header a.active,
-fieldset[disabled] #collections a.active {
-  background-color: #ffffff;
-  border-color: #cccccc;
-}
-#header a .badge,
-#collections a .badge {
-  color: #ffffff;
-  background-color: #333333;
+  border-color: black;
 }
 #header a:hover,
 #collections a:hover {
   background-color: #000;
-  color: #fff;
   border-color: black;
+  color: #fff;
 }
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.video-container {
-  position: relative;
-  display: block;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-  padding-bottom: 56.25%;
-}
-.video-container .embed-responsive-item,
-.video-container iframe,
-.video-container embed,
-.video-container object {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  border: 0;
-}
-.video-container.embed-responsive-16by9 {
-  padding-bottom: 56.25%;
-}
-.video-container.embed-responsive-4by3 {
-  padding-bottom: 75%;
-}
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  border: 0;
+#collections a {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
 }
 /* =Development
 
