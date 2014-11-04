@@ -6,7 +6,7 @@
 			foreach($p->images() AS $image): ?>
  				  	
  				  	<a data-toggle="tooltip" data-placement="left"  data-original-title="<?=$image->caption(); ?>" href="#">
- 				  		<?= thumb($image, array('width' => 1920, 'height' => 1280, 'crop' => true )); ?>
+ 				  		<?= thumb($image, array('width' => 1920,'height' => 920,)); ?>
  				  	</a>
 			<?php 
 			$active = "";

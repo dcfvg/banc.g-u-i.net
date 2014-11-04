@@ -6316,7 +6316,8 @@ button.close {
   background-color: #000;
   color: #fff;
 }
-#header a {
+#header a,
+#collections a {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -6343,31 +6344,45 @@ button.close {
   border-color: black;
 }
 #header a:focus,
+#collections a:focus,
 #header a:active:focus,
+#collections a:active:focus,
 #header a.active:focus,
+#collections a.active:focus,
 #header a.focus,
+#collections a.focus,
 #header a:active.focus,
-#header a.active.focus {
+#collections a:active.focus,
+#header a.active.focus,
+#collections a.active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 #header a:hover,
+#collections a:hover,
 #header a:focus,
-#header a.focus {
+#collections a:focus,
+#header a.focus,
+#collections a.focus {
   color: #333333;
   text-decoration: none;
 }
 #header a:active,
-#header a.active {
+#collections a:active,
+#header a.active,
+#collections a.active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 #header a.disabled,
+#collections a.disabled,
 #header a[disabled],
-fieldset[disabled] #header a {
+#collections a[disabled],
+fieldset[disabled] #header a,
+fieldset[disabled] #collections a {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -6375,51 +6390,81 @@ fieldset[disabled] #header a {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-#header a:hover {
+#header a:hover,
+#collections a:hover {
   background-color: #000;
   color: #fff;
 }
 #header a:hover,
+#collections a:hover,
 #header a:focus,
+#collections a:focus,
 #header a.focus,
+#collections a.focus,
 #header a:active,
+#collections a:active,
 #header a.active,
-.open > .dropdown-toggle#header a {
+#collections a.active,
+.open > .dropdown-toggle#header a,
+.open > .dropdown-toggle#collections a {
   color: #333333;
   background-color: #e6e6e6;
   border-color: #adadad;
 }
 #header a:active,
+#collections a:active,
 #header a.active,
-.open > .dropdown-toggle#header a {
+#collections a.active,
+.open > .dropdown-toggle#header a,
+.open > .dropdown-toggle#collections a {
   background-image: none;
 }
 #header a.disabled,
+#collections a.disabled,
 #header a[disabled],
+#collections a[disabled],
 fieldset[disabled] #header a,
+fieldset[disabled] #collections a,
 #header a.disabled:hover,
+#collections a.disabled:hover,
 #header a[disabled]:hover,
+#collections a[disabled]:hover,
 fieldset[disabled] #header a:hover,
+fieldset[disabled] #collections a:hover,
 #header a.disabled:focus,
+#collections a.disabled:focus,
 #header a[disabled]:focus,
+#collections a[disabled]:focus,
 fieldset[disabled] #header a:focus,
+fieldset[disabled] #collections a:focus,
 #header a.disabled.focus,
+#collections a.disabled.focus,
 #header a[disabled].focus,
+#collections a[disabled].focus,
 fieldset[disabled] #header a.focus,
+fieldset[disabled] #collections a.focus,
 #header a.disabled:active,
+#collections a.disabled:active,
 #header a[disabled]:active,
+#collections a[disabled]:active,
 fieldset[disabled] #header a:active,
+fieldset[disabled] #collections a:active,
 #header a.disabled.active,
+#collections a.disabled.active,
 #header a[disabled].active,
-fieldset[disabled] #header a.active {
+#collections a[disabled].active,
+fieldset[disabled] #header a.active,
+fieldset[disabled] #collections a.active {
   background-color: #ffffff;
   border-color: #cccccc;
 }
-#header a .badge {
+#header a .badge,
+#collections a .badge {
   color: #ffffff;
   background-color: #333333;
 }
-#header a:hover {
+#header a:hover,
+#collections a:hover {
   background-color: #000;
   color: #fff;
   border-color: black;
@@ -6429,7 +6474,43 @@ img {
   max-width: 100%;
   height: auto;
 }
+.video-container {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+.video-container .embed-responsive-item,
+.video-container iframe,
+.video-container embed,
+.video-container object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+.video-container.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+.video-container.embed-responsive-4by3 {
+  padding-bottom: 75%;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
 /* =Development
+
 -----------------------------------------------------------------------------*/
 #dev {
   visibility: hidden;

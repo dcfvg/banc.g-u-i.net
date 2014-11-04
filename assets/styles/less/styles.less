@@ -39,20 +39,29 @@
   text-transform: lowercase;
 }
 
-#header a {
+#header a, #collections a {
   .btn;
   .btn-default;
     border-color:black;
     &:hover {
     background-color: #000;
     color: #fff;
-      border-color:black;
+    border-color:black;
   }
 }
 img {
   .img-responsive;
 }
+
+.video-container {
+  .embed-responsive();
+  .embed-responsive-16by9(); 
+  iframe { 
+    .embed-responsive-item();
+  }
+}
 /* =Development
+
 -----------------------------------------------------------------------------*/
 
 #dev {
