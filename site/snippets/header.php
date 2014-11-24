@@ -26,7 +26,15 @@
 		<!-- main bread crumb -->
 		<?php foreach($site->breadcrumb() AS $crumb): ?>
 			<?php if (! $crumb->isActive()): ?>
-					<a  class="btn btn-lg <?= ($crumb->isActive()) ? 'btn-success"' : 'btn-default' ?>"  data-toggle="tooltip" data-placement="bottom" title="<?= $crumb->subtitle() ?>" href="<?= $crumb->url() ?>">
+					<a class="btn btn-lg <?= ($crumb->isActive()) ? 'btn-success"' : 'btn-default' ?>"  
+						data-toggle="tooltip" 
+						data-placement="bottom" 
+						title="<?= $crumb->subtitle() ?>" 
+						<?php if ($crumb->hasImages()): ?>
+								data-img="<?= thumb($crumb->images()->first(), array('width' => 800 ), false); ?>"
+						<?php endif ?>
+						data-original-title="<?= $crumb->subtitle() ?>"
+						href="<?= $crumb->url() ?>">
 					<?= $crumb->title() ?>
 				</a>
 			<?php endif ?>
@@ -34,8 +42,8 @@
 </div>
 		<!-- current page title and subtitle -->
 		<div class="jumbotron col-sm-4">
-			<h2><?= $page->title() ?></h2>
-			<p class="lead"><?= kirbytext($page->subtitle()) ?></p>
+			<h2 title="<?= $page->title() ?>"><?= $page->title() ?></h2>
+			<div class="lead" title="<?= kirbytext($page->subtitle()) ?>"><?= kirbytext($page->subtitle()) ?></div>
 		</div>
 
 		<!-- sub projects -->

@@ -3,7 +3,15 @@
 	<div id="collections" class="row">
 			<? $collections = $pages->visible() ?>
 			<? foreach ($collections as $collection): ?>
-					<a class="col-sm-2 btn btn-lg" href="<?= $collection->url() ?>" data-toggle="tooltip" data-placement="bottom" title="<?= $collection->subtitle() ?>" ><?= $collection->title() ?></a><br/>
+					<a class="col-sm-2 btn btn-lg" 
+						href="<?= $collection->url() ?>" 
+						data-toggle="tooltip" 
+						data-placement="bottom" 
+						title="<?= $collection->subtitle() ?>" 
+					  data-original-title="<?= $collection->subtitle() ?>"
+						>
+
+						<?= $collection->title() ?></a><br/>
 			<? endforeach ?>
 
 	</div>
